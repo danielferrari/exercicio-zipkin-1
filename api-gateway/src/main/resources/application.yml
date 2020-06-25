@@ -1,0 +1,15 @@
+server:
+  port: 9000
+
+spring:
+  application:
+    name: api-gateway
+
+zuul:
+  routes:
+    cep:
+      path: /cep/**
+      url: http://localhost:8080
+    usuario:
+      path: /usuario/**
+      url: http://localhost:8081
