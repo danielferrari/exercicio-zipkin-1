@@ -6,7 +6,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 
 import java.util.HashMap;
 
-@FeignClient(name = "cep", url="http://localhost:9000/cep")
+@FeignClient(name = "cep")
 public interface CepClient {
     @GetMapping("/{cep}")
     public HashMap<String, Object> getCep(@PathVariable String cep);
